@@ -1,0 +1,28 @@
+{
+  "name": "elm-learn",
+  "homepage": "https://github.com/absynce/elm-learn",
+  "authors": [
+    "Jared M. Smith <absynce@gmail.com>"
+  ],
+  "description": "Teach myself Elm by presenting it to others, with a focus on functional aspects.",
+  "main": "index.html.js",
+  "keywords": [
+    "elm",
+    "impress.js",
+    "JavaScript",
+    "functional"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "impress-js": "impress.js#^0.6.0",
+    "normalize-css": "^5.0.0"
+  }
+}
