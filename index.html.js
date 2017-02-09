@@ -4,15 +4,19 @@ function initPresentation() {
   // Front & center coords
   var front = {
     x         : 3000,
+    y         : 0,
     z         : 0,
-    rotate    : { x  : 0, y: 0, z: 0 },
+    rotateX   : 0,
+    rotateY   : 0,
+    rotateZ   : 0,
     scale     : 3
   };
 
   var options = {
     steps: {
-      'title':               { x: front.x, y: -1200, z: front.z, rotateX: front.rotate.x, rotateY: front.rotate.y, rotateZ: front.rotate.z, scale: front.scale },
-      'overview':            $.extend(front, { y: 1500, scale: 10 })
+      'title': $.extend({}, front, { x: 1500, y: -500 }),//{ x: front.x, y: -1200, z: front.z, rotateX: front.rotate.x, rotateY: front.rotate.y, rotateZ: front.rotate.z, scale: front.scale },
+      'principles-of-functional-programming': $.extend({}, front, { x: -500, y: 1500 }),
+      'overview':            $.extend({}, front, { y: 1500, scale: 10 })
     }
   }
   initData(options);
