@@ -1,0 +1,58 @@
+body {
+    background: rgba(234, 240, 206, 1);
+    background: radial-gradient(rgba(234, 240, 206, 1), rgba(234, 240, 206, 1));
+    color: #120309;
+}
+
+h2 {
+    font-size: 100px;
+}
+
+h3 {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.step {
+  position: relative;
+}
+
+.step .notes {
+  display: none;
+}
+
+#title h1 {
+    font-size: 140px;
+}
+
+#title a {
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+#title .little {
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#title.present .little {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.elm-logo {
+    height: 107px;
+}

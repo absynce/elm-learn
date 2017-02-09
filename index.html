@@ -10,14 +10,14 @@
   <meta name="author" content="Jared M. Smith" />
 
   <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/impress-demo.css" />
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="bower_components/impress-js/css/impress-demo.css" />
   <link rel="stylesheet" href="css/main.css" />
 
   <!-- highlight-js -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
-  <!-- <script src="bower_components/jquery/dist/jquery.js"></script> -->
+  <link rel="stylesheet" href="bower_components/highlightjs/styles/solarized_dark.css">
+  <script src="bower_components/highlightjs/highlight.pack.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="index.html.js"></script>
   <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 </head>
@@ -31,12 +31,22 @@
   <div id="impress">
 
     <div id="title" class="step">
-      <h1>Elm: a funky little tree</h1>
+      <h1>
+        <a href="https://commons.wikimedia.org/wiki/File%3AElm_logo.svg">
+          <img class="elm-logo" src="img/badge-elm.png" />
+        </a>
+        elm
+      </h1>
+      <h2>a funky <span class="little">little</span> tree</h2>
       <p>by <span class="author">Jared M. Smith</span></p>
+      <div class="notes">
+        Show fu ky, then n rotated, then rotate normal/slightly off.
+      </div>
     </div>
 
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10"></div>
   </div>
 
-  <script src="bower_components/impress.js/js/impress.js"></script>
+  <script src="bower_components/impress-js/js/impress.js"></script>
 </body>
 </html>
