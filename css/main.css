@@ -16,12 +16,30 @@ h3 {
 ul { list-style: circle; padding-left: 50px; }
 li { font-size: .7em; }
 
+pre code {
+  font-size: .8em;
+}
+
 .step {
   position: relative;
 }
 
 .step .notes {
   display: none;
+}
+
+.ref-branch {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.5em;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  left: 50px;
+  -webkit-transition: opacity 1s;
+  -moz-transition:    opacity 1s;
+  -ms-transition:     opacity 1s;
+  -o-transition:      opacity 1s;
+  transition:         opacity 1s;
 }
 
 #title h1 {
@@ -58,4 +76,8 @@ li { font-size: .7em; }
 
 .elm-logo {
     height: 107px;
+}
+
+#funky-immutability-records-intro {
+  width: 1000px;
 }

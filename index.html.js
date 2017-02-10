@@ -13,13 +13,14 @@ function initPresentation() {
   };
 
   var options = {
-    steps: {
-      'title': $.extend({}, front, { y: -500 }),
-      'functional-programming-terms': $.extend({}, front, { x: -500, y: 1500 }),
-      'funky-immutability': $.extend({}, front, { x: -2500, y: 3000 }),
-      'funky-immutability-records': $.extend({}, front, { x: -2500, y: 4000 }),
-      'overview': $.extend({}, front, { y: 1500, scale: 12 })
-    }
+    steps: [
+      { id: 'title', data: $.extend({}, front, { y: -500 }) },
+      { id: 'functional-programming-terms', data: $.extend({}, front, { x: -500, y: 1500 }) },
+      { id: 'funky-immutability', data: $.extend({}, front, { x: -2500, y: 3000 }) },
+      { id: 'funky-immutability-records-intro', data: $.extend({}, front, { x: -2500, y: 4500, rotateX: 45, scale: 2 }) },
+      { id: 'funky-immutability-records-vs-objects', data: $.extend({}, front, { x: -2500, y: 6000, rotateX: 45, scale: 2 }) },
+      { id: 'overview', data: $.extend({}, front, { y: 1500, scale: 12 }) }
+    ]
   }
   initData(options);
   initEvents();
@@ -27,20 +28,20 @@ function initPresentation() {
 }
 
 function initData(options) {
-  for (var step in options.steps) {
-    var stepData = options.steps[step];
+  options.steps.forEach(function initStepData(step) {
+    var stepData = options.steps[step.id];
 
     console.log('step', step);
-    var element = document.querySelector('#' + step);
+    var element = document.querySelector('#' + step.id);
 
     if (!element) {
-      return console.error(`${step} not found. Did you rename it in HTML?`);
+      return console.error(`${step.id} not found. Did you rename it in HTML?`);
     }
 
-    for (var stepElement in stepData) {
-      element.dataset[stepElement] = stepData[stepElement];
+    for (var stepElement in step.data) {
+      element.dataset[stepElement] = step.data[stepElement];
     }
-  }
+  });
 }
 
 function initEvents() {

@@ -70,7 +70,9 @@
       <h2>Immutability</h2>
       <ul>
         <li>Annoying</li>
-        <li>Matths-matic</li>
+        <li>Matths-matic
+          <pre><code class="js">f(x) = x + 1;</code></pre>
+        </li>
         <li>Thread-safe</li>
         <li>Ensures program flow is consistent</li>
       </ul>
@@ -83,10 +85,27 @@
       </div>
     </div>
 
-    <div id="funky-immutability-records" class="step">
-      <h2>Records</h2>
-      <h3>Immutability in elm</h3>
+    <div id="funky-immutability-records-intro" class="step">
+      <h2>Immutability in elm</h2>
+      <h3>Records</h3>
+      <pre><code class="elm">darkSide = { artist = "Pinky Floyd", released = 1973 }</code></pre>
+      <div class="notes">
+        <h4>Presentation</h4>
+        <p>
+          Similar to `struct` in C#.
+        </p>
+      </div>
+      <div class="ref-branch">elm-funky-tree@01-immutable-record.elm</div>
+    </div>
 
+    <div id="funky-immutability-records-vs-objects" class="step">
+      <h3>Records vs. objects</h3>
+      <ul>
+        <li>You cannot ask for a field that does not exist.</li>
+        <li>No field will ever be undefined or null.</li>
+        <li>You cannot create recursive records with a this or self keyword.</li>
+      </ul>
+      <a href="https://guide.elm-lang.org/core_language.html#comparing-records-and-objects">Source (Elm Guide)</a>
       <div class="notes">
         <h4>Presentation</h4>
         <p>
