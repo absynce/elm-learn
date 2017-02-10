@@ -14,9 +14,11 @@ function initPresentation() {
 
   var options = {
     steps: {
-      'title': $.extend({}, front, { x: 1500, y: -500 }),//{ x: front.x, y: -1200, z: front.z, rotateX: front.rotate.x, rotateY: front.rotate.y, rotateZ: front.rotate.z, scale: front.scale },
-      'principles-of-functional-programming': $.extend({}, front, { x: -500, y: 1500 }),
-      'overview':            $.extend({}, front, { y: 1500, scale: 10 })
+      'title': $.extend({}, front, { y: -500 }),
+      'functional-programming-terms': $.extend({}, front, { x: -500, y: 1500 }),
+      'funky-immutability': $.extend({}, front, { x: -2500, y: 3000 }),
+      'funky-immutability-records': $.extend({}, front, { x: -2500, y: 4000 }),
+      'overview': $.extend({}, front, { y: 1500, scale: 12 })
     }
   }
   initData(options);
@@ -30,6 +32,10 @@ function initData(options) {
 
     console.log('step', step);
     var element = document.querySelector('#' + step);
+
+    if (!element) {
+      return console.error(`${step} not found. Did you rename it in HTML?`);
+    }
 
     for (var stepElement in stepData) {
       element.dataset[stepElement] = stepData[stepElement];

@@ -13,6 +13,9 @@ h3 {
     margin-top: 20px;
 }
 
+ul { list-style: circle; padding-left: 50px; }
+li { font-size: .7em; }
+
 .step {
   position: relative;
 }
