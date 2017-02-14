@@ -16,10 +16,11 @@ function initPresentation() {
     steps: [
       { id: 'title', data: $.extend({}, front, { y: -500 }) },
       { id: 'functional-programming-terms', data: $.extend({}, front, { x: -500, y: 1500 }) },
-      { id: 'funky-immutability', data: $.extend({}, front, { x: -2500, y: 3075 }) },
-      { id: 'funky-immutability-records-intro', data: $.extend({}, front, { x: -2500, y: 4500, rotateX: 45, scale: 2 }) },
-      { id: 'funky-immutability-records-vs-objects', data: $.extend({}, front, { x: -2500, y: 6000, rotateX: 45, scale: 2 }) },
-      { id: 'funky-pure', data: $.extend({}, front, { x: 500, y: 3000 }) },
+      { id: 'funky-immutability', data: $.extend({}, front, { x: -3000, y: 3075 }) },
+      { id: 'funky-immutability-records-intro', data: $.extend({}, front, { x: -3000, y: 4500, rotateX: 45, scale: 2 }) },
+      { id: 'funky-immutability-records-vs-objects', data: $.extend({}, front, { x: -3000, y: 6000, rotateX: 45, scale: 2 }) },
+      { id: 'funky-pure', data: $.extend({}, front, { x: -200, y: 3000 }) },
+      { id: 'funky-higher-order', data: $.extend({}, front, { x: 2500, y: 3000 }) },
       { id: 'overview', data: $.extend({}, front, { y: 1500, scale: 12 }) }
     ]
   };

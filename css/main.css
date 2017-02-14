@@ -13,6 +13,10 @@ h3 {
     margin-top: 20px;
 }
 
+dt {
+  font-weight: bold;
+}
+
 ul { list-style: circle; padding-left: 50px; }
 li { font-size: .7em; }
 
@@ -80,4 +84,9 @@ pre code {
 
 #funky-immutability-records-intro {
   width: 1000px;
+}
+
+#funky-higher-order img.higher-primate {
+  border-radius: 50%;
+  width: 100px;
 }
