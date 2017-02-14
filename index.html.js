@@ -12,6 +12,11 @@ function initPresentation() {
     scale     : 3
   };
 
+  var higherOrderSteps = $.extend({}, front, {
+    x: 2500,
+    y: 3000
+  });
+
   var options = {
     steps: [
       { id: 'title', data: $.extend({}, front, { y: -500 }) },
@@ -20,7 +25,10 @@ function initPresentation() {
       { id: 'funky-immutability-records-intro', data: $.extend({}, front, { x: -3000, y: 4500, rotateX: 45, scale: 2 }) },
       { id: 'funky-immutability-records-vs-objects', data: $.extend({}, front, { x: -3000, y: 6000, rotateX: 45, scale: 2 }) },
       { id: 'funky-pure', data: $.extend({}, front, { x: -200, y: 3000 }) },
-      { id: 'funky-higher-order', data: $.extend({}, front, { x: 2500, y: 3000 }) },
+      { id: 'funky-higher-order', data: $.extend({}, higherOrderSteps) },
+      { id: 'funky-higher-order-define-higher-order', data: $.extend({}, higherOrderSteps, { y: 4500 }) },
+      { id: 'funky-higher-order-define-first-class-support', data: $.extend({}, higherOrderSteps, { y: 5500 }) },
+      { id: 'funky-higher-order-correction', data: $.extend({}, higherOrderSteps, { y: 7000 }) },
       { id: 'overview', data: $.extend({}, front, { y: 1500, scale: 12 }) }
     ]
   };

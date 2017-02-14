@@ -86,7 +86,30 @@ pre code {
   width: 1000px;
 }
 
+#funky-higher-order .higher {
+  display: inline-block;
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+}
+
+#funky-higher-order.present .higher {
+  -webkit-transform: translateY(-20px) translateZ(50px) rotateX(-30deg);
+  -moz-transform: translateY(-20px) translateZ(50px) rotateX(-30deg);
+  -ms-transform: translateY(-20px) translateZ(50px) rotateX(-30deg);
+  -o-transform: translateY(-20px) translateZ(50px) rotateX(-30deg);
+  transform: translateY(-20px) translateZ(50px) rotateX(-30deg);
+
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -ms-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
 #funky-higher-order img.higher-primate {
   border-radius: 50%;
-  width: 100px;
+  width: 135px;
 }
