@@ -26,7 +26,12 @@ function initPresentation() {
   var funkyBenefits = $.extend({}, front, {
     x: 4000,
     y: 1500
-  })
+  });
+
+  var additionalFeatures = $.extend({}, front, {
+    x: 6500,
+    y: 1500
+  });
 
   var options = {
     steps: [
@@ -42,7 +47,10 @@ function initPresentation() {
       { id: 'funky-higher-order-correction', data: $.extend({}, higherOrderSteps, { y: 7000 }) },
       { id: 'funky-benefits', data: $.extend({}, funkyBenefits, { }) },
       { id: 'funky-benefits-hot-swappable', data: $.extend({}, funkyBenefits, { y: 3000 }) },
-      { id: 'funky-benefits-auto-semver', data: $.extend({}, funkyBenefits, { y: 4000 }) },
+      { id: 'funky-benefits-debugging', data: $.extend({}, funkyBenefits, { y: 4000 }) },
+      { id: 'funky-benefits-auto-semver', data: $.extend({}, funkyBenefits, { y: 5000 }) },
+      { id: 'additional-elm-features', data: $.extend({}, additionalFeatures, { }) },
+      { id: 'additional-elm-features-function-applicators', data: $.extend({}, additionalFeatures, { y: 3100 }) },
       { id: 'overview', data: $.extend({}, front, { y: 1500, scale: 12 }) }
     ]
   };
