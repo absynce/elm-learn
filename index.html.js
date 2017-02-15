@@ -51,6 +51,7 @@ function initPresentation() {
       { id: 'funky-benefits-auto-semver', data: $.extend({}, funkyBenefits, { y: 5000 }) },
       { id: 'additional-elm-features', data: $.extend({}, additionalFeatures, { }) },
       { id: 'additional-elm-features-function-applicators', data: $.extend({}, additionalFeatures, { y: 3100 }) },
+      { id: 'additional-elm-features-embedded-js', data: $.extend({}, additionalFeatures, { y: 5100 }) },
       { id: 'overview', data: $.extend({}, front, { y: 1500, scale: 12 }) }
     ]
   };
