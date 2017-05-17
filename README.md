@@ -1,4 +1,6 @@
 # elm-learn
-Teach myself Elm by presenting it to others, with a focus on functional aspects.
+Teach myself Elm by presenting it to others with a focus on functional programming.
 
-[Elm: a funky little tree presentation](https://absynce.github.io/elm-learn/)
+["Elm: A Funky Little Tree" presentation](https://absynce.github.io/elm-learn/).
+
+In retrospect, I should have downplayed the functional programming terms.
