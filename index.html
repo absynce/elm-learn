@@ -52,7 +52,7 @@
     </div>
 
     <div id="functional-programming-terms" class="step">
-      <h2>Functional Programming Terms</h2>
+      <h2>Functional programming terms</h2>
       <h3>not(cool)</h3>
       <div class="notes">
         <h4>Presentation</h4>
@@ -121,7 +121,6 @@
       <ul>
         <li>Same output for same input</li>
         <li>No side effects (doesn't modify global state)</li>
-        <li></li>
       </ul>
       <div class="ref-branch">elm-funky-tree@02-pure-functions.elm</div>
       <div class="notes">
@@ -135,21 +134,37 @@
 
     <div id="funky-higher-order" class="step">
       <h2>
-        Higher-order functions
+        <span class="higher">Higher</span>-order functions
+        <img class="higher-primate" src="img/higher-primate.png" alt="higher-primate" />
       </h2>
-      <h3>(and first-class functions)</h3>
+      <ul>
+        <li>Higher-order functions</li>
+        <li>First-class function support</li>
+        <li>Correction from last presentation</li>
+      </ul>
+    </div>
+
+    <div id="funky-higher-order-define-higher-order" class="step">
       <dl>
         <dt>Higher-order functions</dt>
         <dd>
           Functions which accept a function as a parameter and/or return
           another function.
         </dd>
+      </dl>
+    </div>
+
+    <div id="funky-higher-order-define-first-class-support" class="step">
+      <dl>
         <dt>First-class function support</dt>
         <dd>
           Functions are treated like values, they can be set to variables,
           passed into other functions, and returned by a function.
         </dd>
       </dl>
+    </div>
+
+    <div id="funky-higher-order-correction" class="step">
       <h3>Correction!</h3>
       <p>
         In my last special topic on functional programming, I described
@@ -163,6 +178,55 @@
           TODO: Add currying explanation of returning function.
         </p>
       </div>
+    </div>
+
+    <div id="funky-benefits" class="step">
+      <h2>Benefits of functional programming in Elm</h2>
+    </div>
+
+    <div id="funky-benefits-hot-swappable" class="step">
+      <h2>Hot-swapping</h2>
+      <ul>
+         <li>Immutability</li>
+         <li>Functional purity</li>
+         <li>Static types</li>
+      </ul>
+      <a href="http://elm-lang.org/blog/interactive-programming">Explanation of hot-swapping in Elm</a>
+    </div>
+
+    <div id="funky-benefits-debugging" class="step">
+      <h2>The perfect bug report</h2>
+      <ul>
+        <li>Import/export</li>
+        <li>Explore history</li>
+      </ul>
+      <a href="http://elm-lang.org/assets/blog/0.18/todomvc.html">Example</a>
+    </div>
+
+    <div id="funky-benefits-auto-semver" class="step">
+      <h2>Auto-semver</h2>
+      <pre><code class="bash">elm-package bump</pre></code>
+      <pre><code class="bash">elm-package diff elm-lang/core 3.0.0 4.0.0</pre></code>
+      <a href="https://github.com/elm-lang/elm-package#publishing-updates">Using elm-package bump/diff</a>
+    </div>
+
+    <div id="additional-elm-features" class="step">
+      <h2>Additional features of elm</h2>
+    </div>
+
+    <div id="additional-elm-features-function-applicators" class="step">
+      <h2>Function applicators</h2>
+      <pre><code class="elm">text (toString jared)</pre></code>
+      <pre><code class="elm">jared |> toString |> text</pre></code>
+      <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/Basics#|>">Docs for |></a>
+      <div class="ref-branch">elm-funky-tree@02-function-applicators.elm</div>
+    </div>
+
+    <div id="additional-elm-features-embedded-js" class="step">
+      <h2>Elm embedded in JS</h2>
+      <pre><code class="js">var node = document.getElementById('main');
+var app = Elm.Todo.embed(node);</pre></code>
+      <a href="https://guide.elm-lang.org/interop/javascript.html">JS interop</a>
     </div>
 
     <div id="overview" class="step"></div>

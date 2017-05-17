@@ -9,17 +9,49 @@ function initPresentation() {
     rotateX   : 0,
     rotateY   : 0,
     rotateZ   : 0,
-    scale     : 3
+    scale     : 2
   };
+
+  var immutabilitySteps = $.extend({}, front, {
+    x: -3000,
+    rotateX: 45,
+    scale: 1
+  });
+
+  var higherOrderSteps = $.extend({}, front, {
+    x: 1500,
+    y: 3125
+  });
+
+  var funkyBenefits = $.extend({}, front, {
+    x: 4000,
+    y: 1500
+  });
+
+  var additionalFeatures = $.extend({}, front, {
+    x: 6500,
+    y: 1500
+  });
 
   var options = {
     steps: [
-      { id: 'title', data: $.extend({}, front, { y: -500 }) },
+      { id: 'title', data: $.extend({}, front, { y: -500, scale: 3 }) },
       { id: 'functional-programming-terms', data: $.extend({}, front, { x: -500, y: 1500 }) },
-      { id: 'funky-immutability', data: $.extend({}, front, { x: -2500, y: 3075 }) },
-      { id: 'funky-immutability-records-intro', data: $.extend({}, front, { x: -2500, y: 4500, rotateX: 45, scale: 2 }) },
-      { id: 'funky-immutability-records-vs-objects', data: $.extend({}, front, { x: -2500, y: 6000, rotateX: 45, scale: 2 }) },
-      { id: 'funky-pure', data: $.extend({}, front, { x: 500, y: 3000 }) },
+      { id: 'funky-immutability', data: $.extend({}, immutabilitySteps, { y: 3075, rotateX: 0, scale: 2 }) },
+      { id: 'funky-immutability-records-intro', data: $.extend({}, immutabilitySteps, { y: 4500 }) },
+      { id: 'funky-immutability-records-vs-objects', data: $.extend({}, immutabilitySteps, { y: 6000 }) },
+      { id: 'funky-pure', data: $.extend({}, front, { x: -750, y: 2975 }) },
+      { id: 'funky-higher-order', data: $.extend({}, higherOrderSteps) },
+      { id: 'funky-higher-order-define-higher-order', data: $.extend({}, higherOrderSteps, { y: 4500 }) },
+      { id: 'funky-higher-order-define-first-class-support', data: $.extend({}, higherOrderSteps, { y: 5500 }) },
+      { id: 'funky-higher-order-correction', data: $.extend({}, higherOrderSteps, { y: 7000 }) },
+      { id: 'funky-benefits', data: $.extend({}, funkyBenefits, { }) },
+      { id: 'funky-benefits-hot-swappable', data: $.extend({}, funkyBenefits, { y: 3000 }) },
+      { id: 'funky-benefits-debugging', data: $.extend({}, funkyBenefits, { y: 4000 }) },
+      { id: 'funky-benefits-auto-semver', data: $.extend({}, funkyBenefits, { y: 5000 }) },
+      { id: 'additional-elm-features', data: $.extend({}, additionalFeatures, { }) },
+      { id: 'additional-elm-features-function-applicators', data: $.extend({}, additionalFeatures, { y: 3100 }) },
+      { id: 'additional-elm-features-embedded-js', data: $.extend({}, additionalFeatures, { y: 5100 }) },
       { id: 'overview', data: $.extend({}, front, { y: 1500, scale: 12 }) }
     ]
   };
